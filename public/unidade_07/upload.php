@@ -1,4 +1,5 @@
 <?php require_once("../../conexao/conexao.php"); ?>
+<?php require_once("_incluir/funcoes.php"); ?>
 <?php
     session_start();
     

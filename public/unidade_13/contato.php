@@ -1,4 +1,15 @@
 <?php require_once("../../conexao/conexao.php"); ?>
+<?php require_once("funcoes.php"); ?>
+<?php if(isset($_POST["enviar"])){
+    if (enviarMensagem($_POST)){
+        $mensagem = "Mensagem enviada com sucesso!";
+    }else{
+        $mensagem = "Falha ao enviar!";
+    }
+    
+    
+}
+?>
 
 <!doctype html>
 <html>

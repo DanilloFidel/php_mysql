@@ -14,4 +14,17 @@
       return $array_erro[$numero];  
     }
 
+    function publicarArquivo($imagem){
+        
+        $arquivo_temporario = $imagem['tmp_name'];
+    $arquivo = basename($imagem['name']);
+    $diretorio = "_uploads";
+    if(move_uploaded_file($arquivo_temporario, $diretorio."/".$arquivo)){
+        $mensagem = "Arquivo carregado com sucesso!";
+    }else{ 
+        $mensagem = mostrarAlertasUploads($imagem['error']);
+    }
+        return $mensagem;
+    }
+
 ?>
